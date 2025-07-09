@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research - Francisco Morales, Ph.D.</title>
+    <meta name="description" content="Research by Francisco Morales on innovation, strategic human capital, and organizational performance.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- GoatCounter Analytics -->
+    <script data-goatcounter="https://fmoralesf.goatcounter.com/count"
+            async src="//gc.zgo.at/count.js"></script>
+    
+    <style>
+        :root {
+            --text-primary: #1a1a1a;
+            --text-secondary: #666;
+            --text-muted: #888;
+            --text-light: #999;
+            --border-light: #f3f4f6;
+            --border-subtle: #f9fafb;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: white;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            padding: 30px 0 40px;
+            border-bottom: 1px solid var(--border-light);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .name {
+            font-size: 28px;
+            font-weight: 300;
+            color: var(--text-primary);
+            letter-spacing: -0.3px;
+            text-decoration: none;
+        }
+        
+        .name:hover {
+            color: var(--text-primary);
+        }
+        
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+        
+        nav a {
+            color: #4a5568;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.2s ease;
+        }
+        
+        nav a:hover,
+        nav a.active {
+            color: var(--text-primary);
+        }
+        
+        /* Main Content */
+        main {
+            padding: 40px 0;
+        }
+        
+        .page-title {
+            font-size: 24px;
+            font-weight: 400;
+            color: var(--text-primary);
+            margin-bottom: 40px;
+            letter-spacing: -0.2px;
+        }
+        
+        .section {
+            margin-bottom: 50px;
+        }
+        
+        .section-title {
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
+        }
+        
+        .paper {
+            margin-bottom: 30px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+        
+        .paper:last-child {
+            border-bottom: none;
+        }
+        
+        .paper-title {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+        
+        .paper-title a {
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+        
+        .paper-title a:hover {
+            color: var(--text-secondary);
+        }
+        
+        .paper-authors {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+        
+        .paper-authors a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+        
+        .paper-authors a:hover {
+            color: var(--text-primary);
+            text-decoration: underline;
+        }
+        
+        .paper-journal {
+            font-size: 13px;
+            color: var(--text-muted);
+            font-style: italic;
+            margin-bottom: 12px;
+        }
+        
+        .paper-summary {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+        }
+        
+        .toggle-btn {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            font-size: 12px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 500;
+            padding: 0;
+            transition: color 0.2s ease;
+        }
+        
+        .toggle-btn:hover {
+            color: var(--text-primary);
+        }
+        
+        .paper-details {
+            margin-top: 15px;
+            padding: 15px;
+            background: var(--border-subtle);
+            border-radius: 4px;
+            display: none;
+        }
+        
+        .paper-details.show {
+            display: block;
+        }
+        
+        .paper-abstract {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+        
+        .paper-links {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .paper-links a {
+            font-size: 12px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .paper-links a:hover {
+            color: var(--text-primary);
+        }
+        
+        .grant-amount {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .name {
+                font-size: 24px;
+            }
+            
+            nav {
+                gap: 20px;
+            }
+            
+            .container {
+                padding: 0 16px;
+            }
+            
+            main {
+                padding: 30px 0;
+            }
+            
+            .page-title {
+                font-size: 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            nav {
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <a href="index.html" class="name">Francisco Morales</a>
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="research.html" class="active">Research</a>
+                    <a href="publications.html">Publications</a>
+                    <a href="teaching.html">Teaching</a>
+                    <a href="ai.html">AI</a>
+                </nav>
+            </div>
+        </header>
+        
+        <main>
+            <h1 class="page-title">Research</h1>
+            
+            <div class="section">
+                <div class="section-title">Working Papers</div>
+                
+                <div class="paper">
+                    <div class="paper-title">
+                        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3869811" target="_blank">
+                            Consistently Mediocre: Modular Collaboration and Organizational Performance
+                        </a>
+                    </div>
+                    <div class="paper-authors">
+                        <strong>Francisco Morales</strong> (Universidad de los Andes, Chile), <a href="https://sethcarnahan.com" target="_blank">Seth Carnahan</a> (Washington University in St. Louis), <a href="https://exequielhernandez.com" target="_blank">Exequiel Hernández</a> (University of Pennsylvania - The Wharton School)
+                    </div>
+                    <div class="paper-summary">
+                        How modular collaboration patterns affect organizational performance variance and predictability in competitive settings.
+                    </div>
+                    <button class="toggle-btn" onclick="toggleDetails('paper1')">Show Details</button>
+                    
+                    <div id="paper1" class="paper-details">
+                        <div class="paper-abstract">
+                            We explore the relationship between modularity in the collaboration patterns among individual employees and the level and variance of organizational performance. Using remarkably fine-grained data from the European club football (soccer) industry between 2010-2019, we measure modularity in the patterns of collaboration within these organizations based on millions of in-game passes involving over 10,000 players in 139 clubs. First, we find that high modularity in collaboration is associated with lower variance in club performance. We document two related mechanisms that appear to lower performance variance: modular collaboration softens the downside of negative exogenous shocks to employees' productive capacity, but modularity also limits the upside of positive exogenous shocks to employees' productive capacity. Second, we find that the modularity of employees' collaboration patterns is associated with a lower average level of club performance. We document a possible mechanism underlying the relationship: rivals seem better able to predict the actions of modular clubs. We conclude that modular collaboration patterns may lock organizations into "consistently mediocre" performance in competitive settings by limiting the upside of positive shocks and by making the organization easier for rivals to anticipate and counteract.
+                        </div>
+                        <div class="paper-links">
+                            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3869811" target="_blank">SSRN</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="paper">
+                    <div class="paper-title">
+                        A Unique Bundle: Immigrant Talent Combinations and Organizational Performance
+                    </div>
+                    <div class="paper-authors">
+                        <strong>Francisco Morales</strong> (Universidad de los Andes, Chile), <a href="https://brittaglennon.com" target="_blank">Britta Glennon</a> (University of Pennsylvania - The Wharton School), <a href="https://sethcarnahan.com" target="_blank">Seth Carnahan</a> (Washington University in St. Louis), <a href="https://exequielhernandez.com" target="_blank">Exequiel Hernández</a> (University of Pennsylvania - The Wharton School)
+                    </div>
+                    <div class="paper-summary">
+                        How unique combinations of immigrant talent backgrounds enhance organizational performance beyond simple diversity measures.
+                    </div>
+                    <button class="toggle-btn" onclick="toggleDetails('paper2')">Show Details</button>
+                    
+                    <div id="paper2" class="paper-details">
+                        <div class="paper-abstract">
+                            This paper examines the impact of immigrant talent combinations on the performance of European football clubs, analyzing 239 clubs and 51,531 matches from 1990 to 2020. We move beyond traditional research approaches that focus on the mere count of immigrant employees, delving into the strategic composition and unique combination of their national backgrounds. Our findings reveal that a club's performance is significantly enhanced by the unique blend of immigrant talents within its roster. This improvement in performance is attributed not just to the presence of foreign-born players, but to the unique combination of national backgrounds. We demonstrate that clubs with a mix of players that is dissimilar to those of the competition outperform those with less unique rosters. This effect remains significant even when controlling for overall roster diversity and the number of foreign players. Our study provides new insights into the role of immigrant talent in organizational success, especially in competitive environments.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">Research Grants</div>
+                
+                <div class="paper">
+                    <div class="paper-title">
+                        How Can Firms Hire and Adapt to Losing Valuable Human Capital? Managing The Impact Of Hiring and Losing Key Employees
+                    </div>
+                    <div class="paper-journal">
+                        Fondecyt Iniciación (N° 11200342), 2020-2023
+                    </div>
+                    <div class="grant-amount">
+                        Funding: $90,000 USD
+                    </div>
+                    <div class="paper-summary">
+                        Research on conditions under which hiring and losing key individuals affects organizational performance.
+                    </div>
+                    <button class="toggle-btn" onclick="toggleDetails('grant1')">Show Details</button>
+                    
+                    <div id="grant1" class="paper-details">
+                        <div class="paper-abstract">
+                            When do organizations benefit from hiring key employees? How can organizations reduce the negative effect of losing a key employee? The literature shows that key individuals can have a disproportionate impact on organizational performance and the performance of close collaborators. Organizations can gain and sustain a competitive advantage by hiring and retaining key individuals. Unfortunately, (1) not every hired individual can affect the organization, and (2) losing a key employee or collaborator can damage an organization's performance. This research aims to examine the conditions under which hiring and losing key individuals affects an organization. As a result, the goal of this project is twofold: to help organizations hire key individuals through the proper mechanism and help organizations replace key individuals they have lost.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        function toggleDetails(id) {
+            const element = document.getElementById(id);
+            const button = element.previousElementSibling;
+            
+            if (element.classList.contains('show')) {
+                element.classList.remove('show');
+                button.textContent = 'Show Details';
+            } else {
+                element.classList.add('show');
+                button.textContent = 'Hide Details';
+            }
+        }
+    </script>
+</body>
+</html>

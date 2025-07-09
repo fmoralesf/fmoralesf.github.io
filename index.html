@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Francisco Morales, Ph.D.</title>
+    <meta name="description" content="Francisco Morales - Assistant Professor at Universidad de los Andes, Chile. Research in innovation and strategic human capital.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- GoatCounter Analytics (replace 'yourname' with your actual subdomain) -->
+   <script data-goatcounter="https://fmoralesf.goatcounter.com/count"
+            async src="//gc.zgo.at/count.js"></script>
+    
+    <style>
+        :root {
+            --text-primary: #1a1a1a;
+            --text-secondary: #666;
+            --text-muted: #888;
+            --text-light: #999;
+            --border-light: #f3f4f6;
+            --border-subtle: #f9fafb;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: white;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            padding: 30px 0 40px;
+            border-bottom: 1px solid var(--border-light);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .name {
+            font-size: 28px;
+            font-weight: 300;
+            color: var(--text-primary);
+            letter-spacing: -0.3px;
+            text-decoration: none;
+        }
+        
+        .name:hover {
+            color: var(--text-primary);
+        }
+        
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+        
+        nav a {
+            color: #4a5568;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.2s ease;
+        }
+        
+        nav a:hover,
+        nav a.active {
+            color: var(--text-primary);
+        }
+        
+        /* Main Content */
+        main {
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .title {
+            font-size: 15px;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+            font-weight: 400;
+        }
+        
+        .institution {
+            font-size: 15px;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+        
+        .research-focus {
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            margin-bottom: 40px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .contact {
+            margin-top: 40px;
+        }
+        
+        .contact a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+        }
+        
+        .contact a:hover {
+            color: var(--text-primary);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: left;
+            }
+            
+            .name {
+                font-size: 24px;
+            }
+            
+            nav {
+                gap: 20px;
+            }
+            
+            .container {
+                padding: 0 16px;
+            }
+            
+            main {
+                padding: 40px 0;
+            }
+            
+            .photo {
+                width: 160px;
+                height: 160px;
+                margin-bottom: 30px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            nav {
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+            
+            main {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <a href="index.html" class="name">Francisco Morales</a>
+                <nav>
+                    <a href="index.html" class="active">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="research.html">Research</a>
+                    <a href="publications.html">Publications</a>
+                    <a href="teaching.html">Teaching</a>
+                    <a href="ai.html">AI</a>
+                    <!-- <a href="cv.html">CV</a> -->
+                    <!-- <a href="contact.html">Contact</a> -->
+                    <!-- <a href="blog.html">Blog</a> -->
+                </nav>
+            </div>
+        </header>
+        
+        <main>
+            <img src="images/FM.png" alt="Francisco Morales" class="photo">
+            
+            <div class="title">Assistant Professor</div>
+            <div class="institution">Universidad de los Andes, Chile</div>
+            
+            <div class="research-focus">
+                Research at the intersection of innovation and strategic human capital, focusing on how firms manage talent and employee collaboration in global environments.
+            </div>
+            
+            <div class="contact">
+                <a href="mailto:fcomorales@gmail.com">fcomorales@gmail.com</a>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
