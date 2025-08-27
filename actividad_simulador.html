@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creando Simuladores Educativos Interactivos</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        .header {
+            background: linear-gradient(135deg, #f0f8ff 0%, #e6f3ff 100%);
+            color: #2d3748;
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        .step {
+            background: #f7fafc;
+            border-left: 4px solid #90cdf4;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .prompt-box {
+            background: #2d3748;
+            color: #f7fafc;
+            padding: 1.5rem;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            margin: 1rem 0;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+        .highlight {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            color: #856404;
+        }
+        .goal {
+            background: #e6fffa;
+            border-left: 4px solid #38b2ac;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 8px 8px 0;
+            color: #234e52;
+        }
+        h1 { margin: 0; font-size: 2.2em; color: #2d3748; }
+        h2 { color: #2d3748; border-bottom: 2px solid #bee3f8; padding-bottom: 0.5rem; }
+        h3 { color: #2b6cb0; }
+        .subtitle { font-size: 1.2em; color: #4a5568; margin-top: 0.5rem; }
+        ul { padding-left: 1.2rem; }
+        li { margin: 0.5rem 0; color: #4a5568; }
+        strong { color: #2d3748; }
+        .examples {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        .example-card {
+            background: #f7fafc;
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid #90cdf4;
+        }
+        .example-card h4 {
+            color: #2b6cb0;
+            margin-top: 0;
+        }
+        .example-card ul {
+            color: #4a5568;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Simuladores Educativos Interactivos</h1>
+        <div class="subtitle">Convierte teoría en experiencias prácticas con IA</div>
+    </div>
+
+    <div class="container">
+        <div class="goal">
+            <strong>🎯 Meta:</strong> Salir con un archivo HTML funcionando que puedas usar en tus clases para que los estudiantes experimenten un concepto de tu disciplina.
+        </div>
+
+        <div class="card">
+            <h2>Paso 1: Define Tu Concepto</h2>
+            <p>Responde mentalmente estas 3 preguntas clave:</p>
+            <div class="step">
+                <ul>
+                    <li><strong>¿Qué concepto quieres volver interactivo?</strong> (Ej: toma de decisiones, oferta/demanda, dilemas éticos)</li>
+                    <li><strong>¿Qué decisiones tomarán los estudiantes?</strong> (2-3 variables que controlen)</li>
+                    <li><strong>¿Qué resultados verán?</strong> (Consecuencias inmediatas de sus decisiones)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Paso 2: Prompt Maestro para Crear tu Simulador</h2>
+            <p>Copia este template, personalízalo y pégalo en ChatGPT/Claude/Gemini:</p>
+            
+            <div class="prompt-box">Actúa como desarrollador web experto en simulaciones educativas. Crea un simulador interactivo para enseñar [TU CONCEPTO] a estudiantes de [TU ÁREA].
+
+**ESPECIFICACIONES:**
+- Concepto: [Ej: "Toma de decisiones bajo incertidumbre en inversiones"]
+- Decisiones del estudiante: [Ej: "Monto a invertir, tipo de inversión, nivel de riesgo"]
+- Resultados: [Ej: "Ganancia/pérdida, feedback sobre la estrategia"]
+- Rondas: [Ej: "5 periodos de inversión"]
+- Insight esperado: [Ej: "Relación riesgo-rendimiento"]
+
+**REQUERIMIENTOS TÉCNICOS:**
+- UN solo archivo HTML autocontenido
+- HTML + CSS + JavaScript vanilla (sin librerías)
+- Funciona offline
+- Interfaz profesional y clara
+- Botón para exportar resumen final
+
+Crea el código completo.</div>
+
+            <div class="highlight">
+                <strong>💡 Clave:</strong> Mientras más específico seas, mejor será el resultado. No tengas miedo de ser detallado.
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Ejemplos de Conceptos por Disciplina</h2>
+            <div class="examples">
+                <div class="example-card">
+                    <h4>Economía/Negocios</h4>
+                    <ul>
+                        <li>Simulador de mercado (oferta/demanda)</li>
+                        <li>Decisiones de pricing</li>
+                        <li>Gestión de inventario</li>
+                    </ul>
+                </div>
+                <div class="example-card">
+                    <h4>Psicología</h4>
+                    <ul>
+                        <li>Dilemas éticos</li>
+                        <li>Sesgos cognitivos</li>
+                        <li>Toma de decisiones grupales</li>
+                    </ul>
+                </div>
+                <div class="example-card">
+                    <h4>Educación</h4>
+                    <ul>
+                        <li>Estilos de retroalimentación</li>
+                        <li>Planificación curricular</li>
+                        <li>Gestión del aula</li>
+                    </ul>
+                </div>
+                <div class="example-card">
+                    <h4>Ingeniería</h4>
+                    <ul>
+                        <li>Optimización de recursos</li>
+                        <li>Análisis de fallas</li>
+                        <li>Trade-offs de diseño</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Paso 3: Guarda y Prueba</h2>
+            <div class="step">
+                <ol>
+                    <li><strong>Copia</strong> todo el código HTML que te dé la IA</li>
+                    <li><strong>Abre</strong> Bloc de Notas (Windows) o TextEdit (Mac)</li>
+                    <li><strong>Pega</strong> el código</li>
+                    <li><strong>Guarda</strong> como "mi_simulador.html"</li>
+                    <li><strong>Abre</strong> haciendo doble clic</li>
+                    <li><strong>Prueba</strong> todas las funciones</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Prompts de Corrección Rápida</h2>
+            
+            <h3>Si algo no funciona:</h3>
+            <div class="prompt-box">El simulador tiene un problema: [DESCRIBE EL ERROR]. Cuando [ACCIÓN], [QUÉ PASA]. 
+
+Corrige el error y devuélveme el código HTML completo funcionando.</div>
+
+            <h3>Para mejorarlo:</h3>
+            <div class="prompt-box">Mejora el simulador agregando:
+1. [FUNCIONALIDAD QUE QUIERES]
+2. [OTRA MEJORA]
+
+Mantén todo lo existente y devuélveme el código completo.</div>
+
+            <h3>Para que se vea mejor:</h3>
+            <div class="prompt-box">Mejora el diseño visual para que se vea profesional y moderno. Usa colores atractivos y mejor tipografía. Mantén toda la funcionalidad.</div>
+        </div>
+
+        <div class="card">
+            <h2>¡Listo para Implementar!</h2>
+            <div class="highlight">
+                <strong>🎯 Resultado esperado:</strong> Un archivo HTML que funcione offline, que puedas compartir con estudiantes y que les permita experimentar tu concepto de forma interactiva.
+            </div>
+            <p><strong>Próximos pasos:</strong> Prueba con algunos estudiantes, recoge feedback, y mejora usando los prompts de corrección.</p>
+        </div>
+    </div>
+</body>
+</html>
